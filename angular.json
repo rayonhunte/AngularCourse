@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AngularCourse"
+    }
+  },
+  "defaultProject": "AngularCourse",
+  "cli": {
+    "analytics": "9b500a40-9d48-4e54-b449-bc4593afafb3"
+  }
 }
