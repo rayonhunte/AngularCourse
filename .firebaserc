@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "zoon-366d8": {
+      "hosting": {
+        "AngularCourse": [
+          "zoon-366d8"
+        ]
+      }
+    }
+  }
+}

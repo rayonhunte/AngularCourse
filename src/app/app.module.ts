@@ -5,8 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {environment as env} from '../environments/environment';
 
 import {SharedModule} from './shared/shared.module';
+import { AngularFireModule } from '@angular/fire';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import {SharedModule} from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    AngularFireModule.initializeApp(env.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
