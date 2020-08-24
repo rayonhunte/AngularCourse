@@ -2,11 +2,7 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <!-- email -->
         <mat-form-field [color]="email.valid && 'accent'">
-            <input matInput 
-            formControlName="email"
-            type="email" 
-            placeholder="Email"
-            autocomplete="off" />
+            <input matInput formControlName="email" type="email" placeholder="Email" autocomplete="off" />
             <mat-error *ngIf="email.invalid && email.dirty">
                 You must enter a valid email address
             </mat-error>
@@ -14,34 +10,18 @@
 
         <!-- password -->
         <mat-form-field [color]="password.valid && 'accent'" *ngIf="!isPasswordReset">
-            <input 
-                matInput
-                formControlName="password"
-                type="password"
-                placeholder="Password"
-                autocomplete="off"
-            />
-            <mat-error *ngIf="password.invalid && password.dirty"> 
+            <input matInput formControlName="password" type="password" placeholder="Password" autocomplete="off" />
+            <mat-error *ngIf="password.invalid && password.dirty">
                 Password must be at least 6 chars long
             </mat-error>
         </mat-form-field>
 
         <!-- password conformation -->
-        <mat-form-field [color]="passwordDoesMatch? 'accent' : 'warm'" *ngIf="isSignup">
-            <input 
-                matInput
-                formControlNam="passwordConfirm"
-                type="password"
-                placeholder="Password Confirm"
-                autocomplete="off"
-            />
-            <mat-error *ngIf="passwordConfirm.dirty && !passwordDoesMatch"> 
-                Passwords does not Match
-            </mat-error>
+        <mat-form-field [color]="passwordDoesMatch ? 'accent' : 'warn'" *ngIf="isSignup">
+            <input matInput formControlName="passwordConfirm" type="password" placeholder="Confirm password" autocomplete="off" />
+            <mat-error *ngIf="passwordConfirm.dirty && !passwordDoesMatch">
+                Password does not match
+              </mat-error>
         </mat-form-field>
     </form>
 </mat-card>
-
-
-{{passwordConfirm.dirty}}
-{{passwordDoesMatch}}
