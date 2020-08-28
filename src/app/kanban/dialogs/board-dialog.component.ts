@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 @Component({
   selector: 'app-board-dialog',
+  styleUrls: ['./dialog.scss'],
   template: `
     <h1 mat-dialog-title>Board</h1>
     <div mat-mat-dialog-content>
@@ -16,8 +17,9 @@ import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
       cdkFocusInitial>Create</button>
     </div>
   `,
-  styles: [
-  ]
+  // stylesUrl: [
+
+  // ]
 })
 export class BoardDialogComponent implements OnInit {
 
