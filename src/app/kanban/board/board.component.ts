@@ -26,7 +26,6 @@ export class BoardComponent implements OnInit {
   }
 
   openDialog(task?: Task, idx?: number): void {
-    console.log(idx)
     const newTask = { label: 'purple' };
     const dialogRef = this.dialog.open(TaskDialogComponent, {
       width: '500px',
@@ -36,8 +35,8 @@ export class BoardComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
+      console.log(this.board.task)
       if (result) {
-        console.log(result)
         if (result.isNew) {
           this.boardService.updateTasks(this.board.id, [
             ...this.board.tasks,
